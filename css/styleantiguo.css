@@ -1,0 +1,239 @@
+/* NavBar */
+.miiconodelnav{
+    border-radius: 30%;
+}
+.navbar{
+    background-color: rgb(0, 0, 0);
+}    
+.navbar-nav{
+    --bs-nav-link-color: rgb(0, 0, 0);
+    --bs-nav-link-hover-color: rgb(0, 0, 0);
+}
+.color-nav{
+    color: rgb(180, 0, 0);
+    font-size: medium;
+
+}
+.navbar-mia{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.navbar-mobile{
+    background-color: rgb(125, 0, 0);
+}
+
+/* index */
+h1{
+    font-family: 'Roboto Slab', serif;
+}
+h2{
+    font-family: 'Roboto Slab', serif;
+}
+h5{
+    font-family: 'Roboto Slab', serif;
+}
+p{
+    font-family: 'Roboto Slab', serif;
+}
+a{
+    font-family: 'Roboto Slab', serif;
+}
+
+body{
+    background-color:  #260000;
+}
+
+.blackrosetitulo{
+    color: rgb(6, 0, 0);
+    
+    
+}
+
+.contenedor-licencias{
+    background-color: rgb(8, 8, 45);
+    color: rgb(255, 253, 253);
+    border: 1px groove black;
+    margin-bottom: 30px;
+}
+
+ul, li{
+    list-style: none;
+    padding-top: 10px;
+    
+}
+
+.cruz{
+    height: 30px;
+    width: 30px;
+    color: gray;
+    margin-bottom: 35px;
+}
+.check{
+    height: 30px;
+    width: 30px;
+    color: green;
+    margin-bottom: 35px;
+    
+}
+/* beatstore */
+
+.contenedordebeats{
+    background-color: black;
+    margin-bottom: 30px;
+}
+.border-botton{
+       color: rgb(34, 33, 33);
+}
+.buyboton{
+    background-color: rgb(180, 0, 0);
+}
+
+div{
+    color: aliceblue;
+}
+.titulo-ins{
+    padding-left: 180px;
+}
+.tiempo-ins{
+    padding-left: 80px;
+}
+.bpm-ins{
+    padding-left: 60px;
+}
+.tags-ins{
+    padding-right: 60px ;
+}
+.bordeaux, .veintediez, .otc{
+    width: 10%;
+  max-width: 500px;
+  margin: 10px;
+  background-color: #000000;
+  border-radius: 1px solid  rgb(180, 0, 0) ;
+  padding: 10px;
+}
+
+
+
+/* servicios */
+
+.titulo{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.mifondo{
+    height: 700px;
+}
+
+.MyM{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    padding: 20px 100px 20px 100px;
+    
+}
+
+/* sobremi */
+
+.biografialogo{
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+}
+
+/* contacto */
+
+.bgblack{
+    background-color: black;
+}
+.mibotondeenviar{
+    border: #000000;
+    background-color: rgb(180, 0, 0) ;
+    color: aliceblue;
+}
+
+
+/* footer */
+footer{
+    background-color: black;
+
+    
+}
+.logodelfooter{
+   margin-bottom: 15px;
+   border-radius: 30%;
+}
+.titulos{
+        color: aliceblue;
+}
+.parrafodelfooter{
+    color: gray;
+    margin-bottom: 50px;
+}
+.mibotoncito{
+    background-color: black;
+    border-color: darkred;
+    border: 1px darkred solid;
+    --bs-btn-hover-bg: #000000;
+    
+}
+.footer1{
+       padding-top: 80px;
+       padding-bottom: 50px;
+}
+.divisiondelfooter{
+    border-bottom: 1px solid gray;
+}
+.copyright{
+    padding: 50px 20px 50px 20px;
+}
+
+.redesmenu{
+    display: flex;
+}
+
+.redeslogo{
+    width: 30px;
+    height: 30px;
+}
+
+ul{
+    color: aliceblue;
+}
+
+/* mobile */
+
+/* index */
+
+@media screen and (max-width: 576px) and (min-width:100px)
+     {
+        .blackrosetitulo {
+            
+           align-items: start;
+           padding-top: 10px;
+           
+        }
+        .biografialogo{
+            width: 50%;
+            height: 50%;
+        }
+        p, h5, li{
+            font-size: small;
+        }
+        h2{
+            font-size: medium;
+        }
+        .blackrosetitulo{
+            display: none;
+        }
+        .titulo-ins, .tiempo-ins, .bpm-ins, .tags-ins{
+            display: none;
+        }
+        .mobile-none{
+            display: none;
+        }
+        .contenedor-comprar{
+            padding-left: 150px;
+        }
+     }
+  
