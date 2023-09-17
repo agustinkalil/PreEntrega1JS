@@ -3,3 +3,31 @@
     margin: auto;
     width: 40%;
 }
+
+/* Estilo para el contenedor principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20vh; /* Ajusta la altura según tus necesidades */
+}
+
+/* Estilo para el título h2 */
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Estilo para el input */
+input {
+    padding: 10px;
+    width: 1000px; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.precio{
+    color: green;
+}

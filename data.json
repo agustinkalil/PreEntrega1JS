@@ -1,0 +1,11 @@
+[
+    {"id": 1,"imagen": "./assets/image-(1).png", "bpm":137 ,"nombre": "Bordeaux", "precio": 29 },
+    {"id": 2,"imagen": "./assets/image-(2).png", "bpm":116 ,"nombre": "2010", "precio":29 },
+    {"id": 3,"imagen": "./assets/image-(3).png", "bpm":131 ,"nombre": "Outside the club", "precio":29 }
+
+
+]
+
+
+
+
