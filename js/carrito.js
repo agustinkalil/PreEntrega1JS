@@ -6,7 +6,7 @@ JSON.parse(sessionStorage.getItem("carrito")) === null && sessionStorage.setItem
 
 let carrito = JSON.parse(sessionStorage.getItem("carrito"))
 
-export const comprarProducto = (idProducto) => {
+export const comprarProducto = (idProducto) => { 
 
     const producto = beatsDisponibles.find((producto) => producto.id === idProducto)
 
