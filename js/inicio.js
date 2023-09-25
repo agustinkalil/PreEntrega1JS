@@ -90,6 +90,9 @@ getBeatsInformacion();
 
 
 
+
+
+
 /* import { comprarProducto } from "./carrito.js";
 
 const divProductos = document.getElementById("productos");

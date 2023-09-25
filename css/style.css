@@ -31,3 +31,26 @@ input {
 .precio{
     color: green;
 }
+
+#carrito-container {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px; 
+  }
+  
+  #carrito-icon {
+    font-size: 24px; 
+    cursor: pointer;
+  }
+  
+  #carrito-cantidad {
+    position: absolute;
+    top: -10px; 
+    right: -10px; 
+    background-color: red; 
+    color: white; 
+    border-radius: 50%; 
+    padding: 6px 8px; 
+    font-size: 14px; 
+  }
+  

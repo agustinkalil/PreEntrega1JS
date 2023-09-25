@@ -1,46 +1,51 @@
 
-import { beatsDisponibles } from "./inicio.js"
+let carrito = [];
 
-
-JSON.parse(sessionStorage.getItem("carrito")) === null && sessionStorage.setItem("carrito", JSON.stringify([]))
-
-let carrito = JSON.parse(sessionStorage.getItem("carrito"))
-
-export const comprarProducto = (idProducto) => { 
-
-    const producto = beatsDisponibles.find((producto) => producto.id === idProducto)
-
-    const { id, nombre, bpm, imagen, precio } = producto
-
-    const productoCarrito = carrito.find((producto) => producto.id === idProducto)
-
-    if(productoCarrito === undefined){
-        const nuevoProductoCarrito = {
-            id: id,
-            nombre: nombre,
-            bpm: bpm,
-            imagen: imagen,
-            precio: precio,
-            cantidad: 1
-        }
-
-        carrito.push(nuevoProductoCarrito)
-
-        sessionStorage.setItem("carrito", JSON.stringify(carrito))
-
-    }else{
-        const indexProductoCarrito = carrito.findIndex((producto) => producto.id === idProducto)
-
-        carrito[indexProductoCarrito].cantidad++
-        carrito[indexProductoCarrito].precio = precio * carrito[indexProductoCarrito].cantidad
-
-        sessionStorage.setItem("carrito", JSON.stringify(carrito))
-    }
-
-    carrito = JSON.parse(sessionStorage.getItem("carrito"))
-
-    alert(`Has adquirido una licencia de la instrumental ${nombre}`)
-
-    console.log(carrito);
+function agregarAlCarrito(producto) {
+  carrito.push(producto);
+  actualizarCarrito();
 }
+function actualizarCarrito() {
+    let carritoElement = document.getElementById("carrito");
+    let carritoCantidadElement = document.getElementById("carrito-cantidad");
+  
+    carritoCantidadElement.textContent = carrito.length;
+  
+
+    carritoElement.innerHTML = "";
+  
+    
+    carrito.forEach((producto) => {
+      let productoElement = document.createElement("div");
+      productoElement.textContent = producto.nombre;
+      carritoElement.appendChild(productoElement);
+    });
+  }
+  
+document.addEventListener("DOMContentLoaded", async () => {
+  
+  let respuesta = await fetch("./data.json");
+  let data = await respuesta.json();
+  let informacion = data;
+
+  
+  let botonesComprar = document.querySelectorAll(".btn.btn-danger");
+
+ 
+  botonesComprar.forEach((boton, index) => {
+    boton.addEventListener("click", () => {
+  
+      let producto = informacion[index];
+
+    
+      agregarAlCarrito(producto);
+
+      Swal.fire({
+        icon: "success",
+        title: "El beat se agregó al carrito",
+        text: "El beat se ha agregado exitosamente a tu carrito de compras.",
+      });
+    });
+  });
+});
 
